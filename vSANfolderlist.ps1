@@ -24,7 +24,7 @@ Set-Location -Path "C:\outputs\"
 
 foreach ($vcenter in $vcenters) {
     Write-host "Connecting to vCenter: $vcenter"
-    Connect-VIServer -Server $vcenter -Credential $vccreds -ErrorAction Stop
+    Connect-VIServer -Server $vcenter".yourdomain.com" -Credential $vccreds #replace with your domain name
     $vSANDatastores = Get-Datastore | Where-Object {$_Type -eq "vsan"}
     
     #cycle through each vSAN datastore
@@ -35,7 +35,7 @@ foreach ($vcenter in $vcenters) {
        $csv = "$($vcenter)_$($datastore.Name).csv"
        $folderList | Export-Csv -Path $csv -NoTypeInformation
     } #end for-loop for datastore
-    Disconnect-VIServer -Server $vcenter".vdescribed.lab" -Confirm:$false
+    Disconnect-VIServer -Server $vcenter".yourdomain.com" -Confirm:$false
 }
 #Capturing Script End Time
 $endTime = Get-Date
