@@ -2,7 +2,10 @@
 #Original Function : by William Lam
 # https://github.com/lamw/vmware-scripts/blob/master/powershell/List-VSANDatastoreFolders.ps1
 #---------------------------------------------------------------
-# Author: Abhilash GB
+<# Author: Abhilash GB
+With all due credit the code shared by William Lam my intention here is to share the code that I had to write to call the function to generate a list accross all the vCenters to suit my purpose. 
+I hope this would save some time for anyone else with a similar requirement.
+#>
 #----------------------------------------------------------------
 Disconnect-VIServer -Server * -Force -Confirm:$false
 #List all in-session vCenter Connections
