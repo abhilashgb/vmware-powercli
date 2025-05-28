@@ -1,7 +1,7 @@
-#-----------------------------------------------------------------
-# The core logic that returns all folders is in the code shared by William Lam
+#---------------------------------------------------------------------------------------------------------
+# The core logic that returns a list of folders for each datastore, is in the code shared by William Lam
 # https://github.com/lamw/vmware-scripts/blob/master/powershell/List-VSANDatastoreFolders.ps1
-#---------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------
 <# Author: Abhilash GB 
 With all due credit to the code shared by William Lam my intention here is to share the code that can be used to generate seperate a CSV for each vCenter in your environment . 
 I hope this would save some time for anyone else with a similar requirement.
